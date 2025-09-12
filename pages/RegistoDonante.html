@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="..\css\formularios.css">
+</head>
+
+<body>
+    <main>
+        <h1>Dona ahora</h1>
+        <div class="cuadro">
+            Elija el tipo de donacion:
+            <select name="donacion">
+                <option>Donacion unica</option>
+                <option>Donacion mensual</option>
+            </select>
+            <br>
+            <br>
+            <p>Elija el monto que quiere donar</p>
+            <br>
+            <input type="radio" name="monto" value="1">$75.000
+            <input type="radio" name="monto" value="2">$100.000
+            <input type="radio" name="monto" value="3">$150.000
+            <input type="radio" name="monto" value="4"> <input type="text" value="Monto a eleccion">
+        </div>
+
+        <div class="cuadro">
+            <h2>Datos personales</h2>
+            <br>
+            <div>
+                <h3>Nombre</h3>
+                <input type="text" name="nombre" id="nombreDonante">
+                <h3>Apellido</h3>
+                <input type="text" name="apellido" id="apellidoDonante">
+                <h3>Fecha de nacimiento</h3>
+                <input type="date" name="cumpleaños" id="cumpleañosDonante">
+            </div>
+            <div>
+                <h3>Documento</h3>
+                <input type="number" name="ndocumento" id="documentoDonante">
+            </div>
+            <div>
+                
+                <h3>Telefono</h3>
+                <input type="tel" id="telefonoDonante">
+                <h3>Email</h3>
+                <input type="email" id="emailDonante">
+            </div>
+        </div>
+        <div class="cuadro">
+            <h3>Tarjeta</h3>
+            <input type="text" id="tarjetaDonante">
+        </div>
+        <p>Tu nombre:<span id="nombreDonanteFinal">indefinido</span></p>
+        <p>Tu apellido:<span id="apellidoDonanteFinal">indefinido</span></p>
+        <p>Tu fecha de nacimiento:<span id="cumpleañosDonanteFinal">indefinido</span></p>
+        <p>Tu documento es:<span id="documentoDonanteFinal">indefinido</span></p>
+        <p>Tu telefono es:<span id="telefonoDonanteFinal">indefinido</span></p>
+        <p>Tu email es:<span id="emailDonanteFinal">indefinido</span></p>
+        <p>Tu tarjeta es:<span id="tarjetaDonanteFinal">indefinido</span></p>
+        <p>si alguno de los datos no concuerda no dudes en cambiarlo</p>
+        <button id="guardarBtn">Guardar Registro</button>
+    </main>
+    <script>
+        const nombre = document.getElementById("nombreDonante")
+        const apellido = document.getElementById("apellidoDonante")
+        const cumpleaños = document.getElementById("cumpleañosDonante")
+        const documento = document.getElementById("documentoDonante")
+        const telefono = document.getElementById("telefonoDonante")
+        const email = document.getElementById("emailDonante")
+        const tarjeta = document.getElementById("tarjetaDonante")
+        const guardarBtn = document.getElementById("guardarBtn")
+
+        document.getElementById("nombreDonanteFinal").textContent = localStorage.getItem("nombreGuardado") || "indefinido"
+        document.getElementById("apellidoDonanteFinal").textContent = localStorage.getItem("apellidoGuardado") || "indefinido"
+        document.getElementById("cumpleañosDonanteFinal").textContent = localStorage.getItem("cumpleañosGuardado") || "indefinido"
+        document.getElementById("documentoDonanteFinal").textContent = localStorage.getItem("documentoGuardado") || "indefinido"
+        document.getElementById("telefonoDonanteFinal").textContent = localStorage.getItem("telefonoGuardado") || "indefinido"
+        document.getElementById("emailDonanteFinal").textContent = localStorage.getItem("emailGuardado") || "indefinido"
+        document.getElementById("tarjetaDonanteFinal").textContent = localStorage.getItem("tarjetaGuardado") || "indefinido"
+
+        function validarTodo() {
+            if (nombre.value.trim() === "" || apellido.value.trim() === "" || cumpleaños.value.trim() === "" || documento.value.trim() === "" || telefono.value.trim() === "" || email.value.trim() === "" || tarjeta.value.trim() === ""
+            ) {
+                alert("Por favor, completa todos los campos antes de guardar.")
+                return false
+            }
+            return true
+        }
+
+        guardarBtn.addEventListener("click", () => {
+            if (validarTodo() === false) {
+                alert("Por favor, completa todos los campos antes de guardar.")
+            } else {
+                localStorage.setItem("nombreGuardado", nombre.value)
+                localStorage.setItem("apellidoGuardado", apellido.value)
+                localStorage.setItem("cumpleañosGuardado", cumpleaños.value)
+                localStorage.setItem("documentoGuardado", documento.value)
+                localStorage.setItem("telefonoGuardado", telefono.value)
+                localStorage.setItem("emailGuardado", email.value)
+                localStorage.setItem("tarjetaGuardado", tarjeta.value)
+
+                document.getElementById("nombreDonanteFinal").textContent = nombre.value
+                document.getElementById("apellidoDonanteFinal").textContent = apellido.value
+                document.getElementById("cumpleañosDonanteFinal").textContent = cumpleaños.value
+                document.getElementById("documentoDonanteFinal").textContent = documento.value
+                document.getElementById("telefonoDonanteFinal").textContent = telefono.value
+                document.getElementById("emailDonanteFinal").textContent = email.value
+                document.getElementById("tarjetaDonanteFinal").textContent = tarjeta.value
+
+                alert("registro guardado con éxito.")
+            }
+        })
+
+    </script>
+</body>
+
+</html>
