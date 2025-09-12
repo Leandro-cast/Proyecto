@@ -1,0 +1,22 @@
+#GPlogo {
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  height: 50px;
+}
+
+a {
+  background-color: #66cc00;
+  color: black;
+  font-weight: bold;
+  float: right;
+  text-decoration: none;
+  margin: 10px;
+  padding: 12px 24px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+a:hover {
+  transform: scale(1.1);
+  background-color: #55aa00;
+}
