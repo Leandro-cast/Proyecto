@@ -6,3 +6,4 @@ botones.forEach(boton => {
         desplegable.classList.toggle("activo");
     });
 });
+//complemento
