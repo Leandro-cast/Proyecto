@@ -17,8 +17,8 @@
     margin-bottom: 10px;
 }
 .botondeApertura{
-    border: 1px solid #1f4912;
-    background-color: #1f4912;
+    border: 1px solid #66cc00;
+    background-color: #66cc00;
     cursor: pointer;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
@@ -27,7 +27,7 @@
     height: 55px;
     text-align: left;
     border-radius: 5px;
-    color: white;
+    color: black;
     padding-left: 15px;
 }
 .desplegable{
@@ -35,7 +35,7 @@
     opacity: 0;
     overflow: hidden;
     transition: max-height 0.1s ease, opacity 0.1s ease;
-    background-color: white;
+    background-color: #66cc00;
     color: black;
     padding: 0 15px;
     border-radius: 0 0 5px 5px;
@@ -50,8 +50,8 @@
     transition: max-height 0.2s ease, opacity 0.2s ease;
 }
 .ContenidoDesplegable{
-    border: 1px solid black;
-    background-color: #1f4912;
+    border: 1px solid #66cc00;
+    background-color: #66cc00;
     
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -70,16 +70,16 @@
     padding: 12px 24px;
     font-weight: bold;
     border-radius: 6px;
-    color: #145214;
+    color: black;
     transition: all 0.3s ease;
 }
 #LlInic:hover{
-    color: white;
-    background-color: #145214;
+    color: black;
+    background-color: #66cc00;
 }
 footer{
-    background-color: #0e380e;
-    color: white;
+    background-color: #66cc00;
+    color: black;
     width: 100%;
     padding: 0%;
 }
