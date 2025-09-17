@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Donaciones</title>
+    <link rel="icon" href="../assets/icons/icono.jpg">
+    <link rel="stylesheet" href="../css/Header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/tema.css">
+</head>
+<body>
+    <header>
+        <header>
+        <img src="/assets/imagenes/Greenpeace_logo.svg.png" id="GPlogo" alt="greenpeace">
+        <a href="/pages/PaginaInicial.html">Inicio</a> 
+        <a href="/pages/preguntas.html">Preguntas Frecuentes</a> 
+        <a href="-">Información Extra</a> 
+        <a href="/pages/formularios.htm">Donaciones</a> 
+        <hr>
+    </header>
+    <p>Elija el monto que quiere donar</p>
+    <br>
+    <input type="radio" name="monto" value="10000"> $10.000 Mensual
+    <input type="radio" name="monto" value="20000"> $20.000 Mensual
+    <input type="radio" name="monto" value="50000"> $50.000 Mensual
+    <input type="radio" name="monto" value="otro"> 
+    <input type="text" id="montoUnico" placeholder="Monto único a elección">
+    <br>
+    <button id="botonDonar">Enviar donacion</button>
+
+    <script>
+        const boton = document.getElementById("botonDonar")
+
+        boton.addEventListener("click", () => {
+            const montoUnico = document.getElementById("montoUnico")
+            const seleccion = document.querySelector("input[name='monto']:checked") 
+            /*el queryselector sirve para que en caso de que elija monto unico lo verifique*/
+
+            if (!seleccion){ /*en caso de que no haya seleccionado ninguna opcion*/
+                alert("por favor, elija una de las opciones")
+                return
+            }
+
+            if (seleccion.value === "otro") {
+
+            if (montoUnico === "" || isNaN(montoUnico) /*verifica si es un numero (lo tuve que buscar)*/ || Number(montoUnico) <= 0) {
+            alert("Ingrese un monto valido en el campo de texto.")
+            return
+            }
+            alert("Donación seleccionada: $" + montoUnico)
+            } 
+
+            else {
+            alert("Donación seleccionada: $" + seleccion.value)
+            }
+        })
+        
+    </script>
+</body>
+</html>
