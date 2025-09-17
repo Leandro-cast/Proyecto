@@ -4,7 +4,6 @@
   width: 350px;
   height: 50px;
 }
-
 a {
   background-color: #66cc00;
   color: black;
@@ -14,6 +13,8 @@ a {
   margin: 10px;
   padding: 12px 24px;
   transition: transform 0.2s ease, background-color 0.2s ease;
+  border-radius: 6px;
+  border-bottom: 1px solid black;
 }
 
 a:hover {
