@@ -14,30 +14,3 @@ h1 {
 h2 {
     color: #66cc00;
 }
-
-body {
-  background-color: white;
-  color: black;
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark-mode {
-  background-color: #222;
-  color: white;
-}
-
-#modeToggle {
-  background-color: #66cc00;
-  color: black;
-  font-weight: bold;
-  float: right;
-  text-decoration: none;
-  margin: 10px;
-  padding: 12px 24px;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-body.dark-mode #modeToggle {
-  background-color: #143b00;
-  color: #ffffff;
-}
