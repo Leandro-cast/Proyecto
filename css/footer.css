@@ -1,0 +1,19 @@
+footer {
+    background-color: #66cc00;
+    display: flex;
+    padding: 10px;
+    align-content: center;
+    margin: 0px;
+}
+
+div {
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+div img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 75%;
+}
