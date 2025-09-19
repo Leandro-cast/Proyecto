@@ -1,5 +1,7 @@
 # Trabajo practico 1: pagina greenpleace
 
+##alumnos: Castillo Leandro, Castro Santiago y Corbalan Santiago
+
 ##Tecnologias usadas:
 -HTML
 -CSS
