@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/Header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/tema.css">
+    <link rel="stylesheet" href="enviarDonacion.css">
 </head>
 <body>
     <header>
@@ -19,15 +20,34 @@
         <a href="/pages/formularios.htm">Donaciones</a> 
         <hr>
     </header>
-    <p>Elija el monto que quiere donar</p>
-    <br>
-    <input type="radio" name="monto" value="10000"> $10.000 Mensual
-    <input type="radio" name="monto" value="20000"> $20.000 Mensual
-    <input type="radio" name="monto" value="50000"> $50.000 Mensual
-    <input type="radio" name="monto" value="otro"> 
-    <input type="text" id="montoUnico" placeholder="Monto único a elección">
-    <br>
-    <button id="botonDonar">Enviar donacion</button>
+    <div class="contenedorDonaciones">
+    <img src="c:\Users\PC\Desktop\imagenes\Donacion.png" id="imgDonacion" alt="greenpeace">
+    <div class="opcionesDonacion">
+        <b>Elija el monto que quiere donar</b>
+        <br>
+        <label><input type="radio" name="monto" value="10000"> $10.000 Mensual</label>
+        <label><input type="radio" name="monto" value="20000"> $20.000 Mensual</label>
+        <label><input type="radio" name="monto" value="50000"> $50.000 Mensual</label>
+        <label>
+            <input type="radio" name="monto" value="otro"> 
+            <input type="text" id="montoUnico" placeholder="Monto único a elección">
+            <br>
+            <button id="botonDonar">Enviar donacion</button>
+        </label>
+    </div>
+    </div>
+
+    <div>
+        <b>Sé parte del cambio que la naturaleza necesita</b>
+        <p>
+        Si llegaste hasta acá, es porque te importa el planeta. Porque tenés alma de activista y creés,
+        como nosotros, que un futuro más justo y verde es posible. <br>
+        Trabajamos para defender el medio ambiente. Somos personas como vos: 
+        comprometidas, valientes y con la convicción de que cada acción cuenta.<br>
+        No recibimos dinero de empresas, partidos políticos ni gobiernos. Solo contamos con tu ayuda.
+        </p>
+    </div>
+
 
     <script>
         const boton = document.getElementById("botonDonar")
