@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,11 +44,11 @@
 
             if (seleccion.value === "otro") {
 
-            if (montoUnico === "" || isNaN(montoUnico) /*verifica si es un numero (lo tuve que buscar)*/ || Number(montoUnico) <= 0) {
+            if (montoUnico.value === "" || isNaN(montoUnico.value) /*verifica si es un numero (lo tuve que buscar)*/ || Number(montoUnico.value) <= 0) {
             alert("Ingrese un monto valido en el campo de texto.")
             return
             }
-            alert("Donación seleccionada: $" + montoUnico)
+            alert("Donación seleccionada: $" + montoUnico.value)
             } 
 
             else {
