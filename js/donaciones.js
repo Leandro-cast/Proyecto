@@ -17,6 +17,14 @@
         document.getElementById("emailDonanteFinal").textContent = localStorage.getItem("emailGuardado") || "indefinido"
         document.getElementById("tarjetaDonanteFinal").textContent = localStorage.getItem("tarjetaGuardado") || "indefinido"
 
+        function crearEnlace(){
+            const link = document.createElement("a")
+            link.id = "enlaceExito"
+            link.textContent = "Enviar Donaciones"
+            link.href = "pages/EnviarDonaciones.html"
+            document.getElementById("InfoUsuario").appendChild(link)
+        }
+
         if (localStorage.getItem("linkCreado") === "true") {
             crearEnlace()
         }
@@ -85,13 +93,6 @@
                 if (!document.getElementById("enlaceExito")) {
                     crearEnlace()
                     localStorage.setItem("linkCreado", "true")
-                }
-                    function crearEnlace(){
-                    const link = document.createElement("a")
-                    link.id = "enlaceExito"
-                    link.textContent = "Enviar Donaciones"
-                    link.href = "pages/EnviarDonaciones.html"
-                    document.getElementById("InfoUsuario").appendChild(link)
                 }
             }
         })
