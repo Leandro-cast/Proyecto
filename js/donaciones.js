@@ -17,6 +17,14 @@
         document.getElementById("emailDonanteFinal").textContent = localStorage.getItem("emailGuardado") || "indefinido"
         document.getElementById("tarjetaDonanteFinal").textContent = localStorage.getItem("tarjetaGuardado") || "indefinido"
 
+        function crearEnlace(){
+            const link = document.createElement("a")
+            link.id = "enlaceExito"
+            link.textContent = "Enviar Donaciones"
+            link.href = "pages/EnviarDonaciones.html"
+            document.getElementById("InfoUsuario").appendChild(link)
+        }
+
         if (localStorage.getItem("linkCreado") === "true") {
             crearEnlace()
         }
@@ -41,7 +49,7 @@
                 alert("El apellido no es valido.")
                 return false
             }
-            if (!email.value.includes("@gmail.com")) {
+            if (!email.value.includes("@")) {
                 alert("El email no es valido.")
                 return false
             }
@@ -53,7 +61,7 @@
                 alert("El numero de telefono no es valido.")
                 return false
             }
-            if (tarjeta.value.trim().lenght < 14){
+            if (tarjeta.value.trim().length < 14){
                 alert("La tarjeta no es valida.")
                 return false
             }
@@ -81,18 +89,10 @@
                 document.getElementById("tarjetaDonanteFinal").textContent = tarjeta.value
 
                 alert("registro guardado con éxito. Para finalizar con la donacion, precione el boton Enviar Donaciones")
-                console.log("registro guardado con éxito. Para finalizar con la donacion, precione el boton Enviar Donaciones")
 
                 if (!document.getElementById("enlaceExito")) {
                     crearEnlace()
                     localStorage.setItem("linkCreado", "true")
-                }
-                    function crearEnlace(){
-                    const link = document.createElement("a")
-                    link.id = "enlaceExito"
-                    link.textContent = "Enviar Donaciones"
-                    link.href = "pages/EnviarDonaciones.html"
-                    document.getElementById("InfoUsuario").appendChild(link)
                 }
             }
         })
