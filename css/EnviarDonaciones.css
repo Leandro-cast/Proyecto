@@ -41,7 +41,8 @@
     border-color: #2d572c;
     outline: none;
 }
-p {
-    text-align: center;
-    text-align: justify;
+#textoDonacion {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
 }
