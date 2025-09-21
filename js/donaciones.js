@@ -81,6 +81,7 @@
                 document.getElementById("tarjetaDonanteFinal").textContent = tarjeta.value
 
                 alert("registro guardado con éxito. Para finalizar con la donacion, precione el boton Enviar Donaciones")
+                console.log("registro guardado con éxito. Para finalizar con la donacion, precione el boton Enviar Donaciones")
 
                 if (!document.getElementById("enlaceExito")) {
                     crearEnlace()
