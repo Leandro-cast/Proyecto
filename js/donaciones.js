@@ -49,7 +49,7 @@
                 alert("El apellido no es valido.")
                 return false
             }
-            if (!email.value.includes("@gmail.com")) {
+            if (!email.value.includes("@")) {
                 alert("El email no es valido.")
                 return false
             }
@@ -61,7 +61,7 @@
                 alert("El numero de telefono no es valido.")
                 return false
             }
-            if (tarjeta.value.trim().lenght < 14){
+            if (tarjeta.value.trim().length < 14){
                 alert("La tarjeta no es valida.")
                 return false
             }
