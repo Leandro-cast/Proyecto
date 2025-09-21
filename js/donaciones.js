@@ -21,7 +21,7 @@
             const link = document.createElement("a")
             link.id = "enlaceExito"
             link.textContent = "Enviar Donaciones"
-            link.href = "pages/EnviarDonaciones.html"
+            link.href = "..pages/EnviarDonaciones.html"
             document.getElementById("InfoUsuario").appendChild(link)
         }
 

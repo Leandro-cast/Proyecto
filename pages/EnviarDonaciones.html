@@ -18,6 +18,7 @@
     <a href="../pages/preguntas.html">Preguntas Frecuentes</a> 
     <a href="../pages/infoExtra.html">Información Extra</a> 
     <a href="../pages/RegistoDonante.html">Donaciones</a> 
+    <button id="modeToggle">Cambio de modo</button>
         <hr>
     </header>
     <div class="contenedorDonaciones">
@@ -47,35 +48,7 @@
         No recibimos dinero de empresas, partidos políticos ni gobiernos. Solo contamos con tu ayuda.
         </p>
     </div>
-
-
-    <script>
-        const boton = document.getElementById("botonDonar")
-
-        boton.addEventListener("click", () => {
-            const montoUnico = document.getElementById("montoUnico")
-            const seleccion = document.querySelector("input[name='monto']:checked") 
-            /*el queryselector sirve para que en caso de que elija monto unico lo verifique*/
-
-            if (!seleccion){ /*en caso de que no haya seleccionado ninguna opcion*/
-                alert("por favor, elija una de las opciones")
-                return
-            }
-
-            if (seleccion.value === "otro") {
-
-            if (montoUnico.value === "" || isNaN(montoUnico.value) /*verifica si es un numero (lo tuve que buscar)*/ || Number(montoUnico.value) <= 0) {
-            alert("Ingrese un monto valido en el campo de texto.")
-            return
-            }
-            alert("Donación seleccionada: $" + montoUnico.value)
-            } 
-
-            else {
-            alert("Donación seleccionada: $" + seleccion.value)
-            }
-        })
-        
-    </script>
+    <script src="../js/donaciones.js"></script>
+    <script src="../js/cambioTema.js"></script>
 </body>
 </html>
